@@ -1,9 +1,9 @@
 dependencies:
 - name: commons
   repository: https://helm.wyrihaximus.net/
-  version: 0.1.0
+  version: 0.1.1
 - name: horizontal-pod-autoscalers
   repository: https://helm.wyrihaximus.net/
-  version: 0.2.0
-digest: sha256:05017e6af7c52308e69f1e7769366c66e1e8194661b08792b1d1bb24b2ba49de
-generated: "2020-12-09T22:30:21.6534143+01:00"
+  version: 1.0.0
+digest: sha256:dd1c10fb1e0cbdf9b2cec37ad29a91be3827b719bbc3cb57dacbd5fa2e98ae48
+generated: "2023-07-25T13:12:21.885420252Z"
