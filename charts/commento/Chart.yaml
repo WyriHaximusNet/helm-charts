@@ -12,5 +12,5 @@ dependencies:
     version: ^0.1
     repository: https://helm.wyrihaximus.net/
   - name: horizontal-pod-autoscalers
-    version: ^0.2
+    version: ^1.0.0
     repository: https://helm.wyrihaximus.net/
