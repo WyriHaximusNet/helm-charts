@@ -39,7 +39,7 @@ jobs:
         run: git fetch --prune --unshallow
 
       - name: Create kind cluster
-        uses: helm/kind-action@v1.8.0
+        uses: helm/kind-action@v1.9.0
         with:
           installLocalPathProvisioner: true # Only build a kind cluster if there are chart changes to test.
           node_image: "kindest/node:v${{ matrix.k8s }}.0"
