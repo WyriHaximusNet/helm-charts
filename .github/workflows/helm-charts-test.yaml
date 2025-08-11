@@ -11,7 +11,7 @@ jobs:
       maintained: ${{ steps.maintained.outputs.charts }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           sparse-checkout: |
             charts/
@@ -46,7 +46,7 @@ jobs:
         chart: ${{ fromJson(needs.generate-charts.outputs.maintained) }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Move current README
         run: |
           mv charts/${{ matrix.chart }}/README.md charts/${{ matrix.chart }}/README.current.md
@@ -76,7 +76,7 @@ jobs:
         chart: ${{ fromJson(needs.generate-charts.outputs.maintained) }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           sparse-checkout: |
             charts/${{ matrix.chart }}/
@@ -100,7 +100,7 @@ jobs:
       - validate-values-schema
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Fetch history
         run: git fetch --prune --unshallow
@@ -132,7 +132,7 @@ jobs:
           - "1.31"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Fetch history
         run: git fetch --prune --unshallow
