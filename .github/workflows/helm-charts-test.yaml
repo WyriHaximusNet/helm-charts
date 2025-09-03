@@ -88,7 +88,7 @@ jobs:
           files: |
             charts/${{ matrix.chart }}/**/*values.yaml
       - name: Validate values schema json
-        uses: losisin/helm-values-schema-json-action@v1
+        uses: losisin/helm-values-schema-json-action@v2
         with:
           input: ${{ steps.valueFiles.outputs.paths }}
           output: charts/${{ matrix.chart }}/values.schema.json
