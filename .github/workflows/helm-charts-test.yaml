@@ -105,7 +105,7 @@ jobs:
       - name: Fetch history
         run: git fetch --prune --unshallow
       - name: Install Chart Tester
-        uses: helm/chart-testing-action@v2.6.1
+        uses: helm/chart-testing-action@v2.7.0
       - name: Add WyriHaximusNet repo
         run: helm repo add WyriHaximusNet https://helm.wyrihaximus.net/
       - name: Lint charts
@@ -162,7 +162,7 @@ jobs:
       - name: Add WyriHaximusNet repo
         run: helm repo add WyriHaximusNet https://helm.wyrihaximus.net/
       - name: Install Chart Tester
-        uses: helm/chart-testing-action@v2.6.1
+        uses: helm/chart-testing-action@v2.7.0
       - name: Run List Changed
         id: list-changed
         run: |
