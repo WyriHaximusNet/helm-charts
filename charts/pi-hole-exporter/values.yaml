@@ -1,6 +1,6 @@
 image:
   repository: ekofr/pihole-exporter
-  tag: v0.4.0
+  tag: v1.2.0
   pullPolicy: IfNotPresent
 
 configurationSecret: pi-hole
