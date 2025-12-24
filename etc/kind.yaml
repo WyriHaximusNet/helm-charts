@@ -2,61 +2,121 @@ kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
   - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Orgrimmar
     labels:
       "topology.kubernetes.io/region": Kalimdor
       "topology.kubernetes.io/zone": Orgrimmar
       "wyrihaximus.net/type": leader
   - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Thunderbluff
     labels:
       "topology.kubernetes.io/region": Kalimdor
       "topology.kubernetes.io/zone": Thunderbluff
       "wyrihaximus.net/type": leader
   - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: The_Undercity
     labels:
       "topology.kubernetes.io/region": Eastern_Kingdoms
       "topology.kubernetes.io/zone": The_Undercity
       "wyrihaximus.net/type": leader
   - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Crossroads
     labels:
       "topology.kubernetes.io/region": Kalimdor
       "topology.kubernetes.io/zone": Crossroads
       "wyrihaximus.net/type": worker
   - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Gadgetzan
     labels:
       "topology.kubernetes.io/region": Kalimdor
       "topology.kubernetes.io/zone": Gadgetzan
       "wyrihaximus.net/type": worker
   - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Booty_Bay
     labels:
       "topology.kubernetes.io/region": Eastern_Kingdoms
       "topology.kubernetes.io/zone": Booty_Bay
       "wyrihaximus.net/type": worker
   - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: The_Dark_Portal
     labels:
       "topology.kubernetes.io/region": Draenor
       "topology.kubernetes.io/zone": The_Dark_Portal
       "wyrihaximus.net/type": ingress
   - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Schnottzs_Landing
     labels:
       "topology.kubernetes.io/region": Kalimdor
       "topology.kubernetes.io/zone": Schnottzs_Landing
       "wyrihaximus.net/type": ingress
   - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Moaki_Harbor
     labels:
       "topology.kubernetes.io/region": Northrend
       "topology.kubernetes.io/zone": Moaki_Harbor
       "wyrihaximus.net/type": ingress
   - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Eastvale_Logging_Camp
     labels:
       "topology.kubernetes.io/region": Eastern_Kingdoms
       "topology.kubernetes.io/zone": Eastvale_Logging_Camp
       "wyrihaximus.net/type": poen
   - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Korkron_lumber_yard
     labels:
       "topology.kubernetes.io/region": Kalimdor
       "topology.kubernetes.io/zone": Korkron_lumber_yard
       "wyrihaximus.net/type": poen
   - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: Bilgewater_Lumber_Yard
     labels:
       "topology.kubernetes.io/region": Lost_Isles
       "topology.kubernetes.io/zone": Bilgewater_Lumber_Yard
